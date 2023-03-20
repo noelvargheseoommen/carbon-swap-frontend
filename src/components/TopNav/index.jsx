@@ -1,4 +1,4 @@
-import './index.css'
+import "./index.css";
 
 import {
   ChakraProvider,
@@ -6,41 +6,44 @@ import {
   Button,
   ButtonGroup,
   Spacer,
-  Image, Flex,  HStack , chakra , Stack,
-
-} from '@chakra-ui/react'
-
-
+  Image,
+  Flex,
+  HStack,
+  chakra,
+  Stack,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function TopNav() {
+  return (
+    <Box bg="#C9E265 " w="100%" p={4} color="white">
+      <Stack spacing={800} direction="row" align="center">
+        <Image
+          height="90px"
+          src=".\src\assets\images\logo2.jpeg"
+          alt="c02 icon"
+        />
 
-return (
-
-<Box   bg='#C9E265 ' w='100%' p={4} color='white'   >  
-
-<Stack spacing={800} direction='row' align='center'>
-
-<Image height='90px' src='.\src\assets\images\logo2.jpeg' alt='c02 icon' />
-
-<Stack spacing={4} direction='row' align='center'>
-
-<button2 >
-Home
-</button2>
-<button2 >
-Swap
-</button2>
-<button2 colorScheme='teal' size='md'>
-Dashboard
-</button2>
-<Button colorScheme='black' left='90%' >Connect</Button>
-
-</Stack>
-
-</Stack>
-
-</Box>
-)
+        <Stack spacing={4} direction="row" align="center">
+          <button2>Home</button2>
+          <button2>
+            {/* Styling is applied to link in the css file */}
+            <Link to="/swap" className="nav-router-link">
+              {/* change url to /swap without causing the entire app reload */}
+              {/* Always use Link tag instead of <a> tag */}
+              Swap
+            </Link>
+          </button2>
+          <button2 colorScheme="teal" size="md">
+            Dashboard
+          </button2>
+          <Button colorScheme="black" left="90%">
+            Connect
+          </Button>
+        </Stack>
+      </Stack>
+    </Box>
+  );
 }
 
-export default TopNav
+export default TopNav;
