@@ -5,6 +5,7 @@ import './App.css'
 
 import TopNav from './components/TopNav'
 import Home from './pages/Home'
+import BottomNav from './components/BottomNav'
 
 import {
   ChakraProvider,
@@ -18,32 +19,21 @@ import {
 
 
 
-
 function App() {
 
-
-return (
+  return(
 
    
-<div className="app">
+            <div className="app">
 
-<TopNav/>
+                <TopNav/>
   
-<Home/>
+                <Home/>
 
+                <BottomNav/>
 
-
-<Box bg='#C9E265 ' w='100%' h='70px' p={4} color='white'>
-      <div>
-  
-     </div>
-     <Spacer />
-  
-
-   </Box>  
-
-    </div>
-  )
+            </div>
+         )
 }
 
 export default App
