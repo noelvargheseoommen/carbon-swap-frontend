@@ -1,5 +1,8 @@
 import './index.css'
 
+import TopNav from '../../components/TopNav'
+import BottomNav from '../../components/BottomNav'
+
 import {
     ChakraProvider,
     Box,
@@ -16,6 +19,13 @@ function Home() {
 
 
 return (
+
+  <div className="home">
+  <TopNav/>
+  
+
+
+
 
 <Box boxSize='sm'>
 <br></br> <br></br>
@@ -38,6 +48,11 @@ return (
         <h2>Liquidity locked on the </h2><h22>[carbon]</h22> <h2>swap</h2>
         <br></br> <br></br> <br></br> <br></br><br></br><br></br><br></br>
 </Box>
+
+
+<BottomNav/>
+
+</div>
 
 )
 }

@@ -1,11 +1,5 @@
-import { useState } from 'react'
-
-
 import './App.css'
-
-import TopNav from './components/TopNav'
 import Home from './pages/Home'
-import BottomNav from './components/BottomNav'
 
 
 function App() {
@@ -14,13 +8,9 @@ function App() {
 
    
             <div className="app">
-
-                <TopNav/>
-  
+         
                 <Home/>
-
-                <BottomNav/>
-
+              
             </div>
          )
 }
