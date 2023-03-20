@@ -1,13 +1,9 @@
 import './index.css'
 
 import {
-    ChakraProvider,
+ 
     Box,
-    Button,
-    ButtonGroup,
-    Spacer,
-    Image, Flex,  HStack , chakra , Stack,
-  
+   
   } from '@chakra-ui/react'
 
 
