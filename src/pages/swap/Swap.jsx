@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import './swap.css'
 
+import TopNav from '../../components/TopNav'
+import BottomNav from '../../components/BottomNav'
+
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
   Box,
   Button,
   ButtonGroup,
@@ -13,7 +12,6 @@ import {
   Image, Flex,  HStack , chakra ,
 
 } from '@chakra-ui/react'
-
 
 
 
@@ -26,20 +24,7 @@ function Swap() {
    
     <div className="swap">
 
-      <Box bg='#C9E265 ' w='100%' p={4} color='white'  >
-
-   
-
-
-       <h23>Home  -  </h23>  <h23>Swap  -  </h23>  <h23>Dashboard</h23>
-     
-       
-
-    <div>
-     <Button colorScheme='black' left='45%' >Connect</Button>
-    </div>
-
-   </Box>
+<TopNav/>
   
   
 
@@ -69,15 +54,7 @@ function Swap() {
 </Box>
 
 
-<br></br>
-<Box bg='#C9E265 ' w='100%' h='50px' p={4} color='white'>
-      <div>
-  
-     </div>
-     <Spacer />
-  
-
-   </Box>  
+<BottomNav/>
 
     </div>
   )
