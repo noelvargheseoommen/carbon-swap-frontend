@@ -25,15 +25,23 @@ function TopNav() {
         />
 
         <Stack spacing={4} direction="row" align="center">
-          <button2>Home</button2>
+
+           <Link to="/" className="nav-router-link">
+          <button2>
+            Home
+            </button2>
+           </Link>
+
+             <Link to="/swap" className="nav-router-link">
           <button2>
             {/* Styling is applied to link in the css file */}
-            <Link to="/swap" className="nav-router-link">
+         
               {/* change url to /swap without causing the entire app reload */}
               {/* Always use Link tag instead of <a> tag */}
               Swap
-            </Link>
           </button2>
+             </Link>
+
           <button2 colorScheme="teal" size="md">
             Dashboard
           </button2>
