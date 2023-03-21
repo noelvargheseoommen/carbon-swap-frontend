@@ -1,17 +1,13 @@
 import "./index.css";
+import ConnectButton from "../ConnectButton/index.jsx";
 
 import {
-  ChakraProvider,
   Box,
   Button,
-  ButtonGroup,
-  Spacer,
   Image,
-  Flex,
-  HStack,
-  chakra,
   Stack,
 } from "@chakra-ui/react";
+
 import { Link } from "react-router-dom";
 
 function TopNav() {
@@ -45,9 +41,8 @@ function TopNav() {
           <button2 colorScheme="teal" size="md">
             Dashboard
           </button2>
-          <Button colorScheme="black" left="90%">
-            Connect
-          </Button>
+          
+        <ConnectButton/>
         </Stack>
       </Stack>
     </Box>
