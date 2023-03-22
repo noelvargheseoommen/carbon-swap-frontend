@@ -4,7 +4,7 @@ import {
 
 function ConnectButton() {
   return (
-          <Button colorScheme="black" left="90%">
+          <Button  size="lg">
             Connect
           </Button>
 

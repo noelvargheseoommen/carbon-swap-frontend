@@ -1,8 +1,8 @@
-import './index.css'
+
 
 import TopNav from '../../components/TopNav'
 import BottomNav from '../../components/BottomNav'
-
+import ConnectButton from '../../components/ConnectButton'
 
 import {
     ChakraProvider,
@@ -51,7 +51,17 @@ return (
 </Flex>
 </Center>
 
-<Text  fontSize='6xl' color='#C9E265'>606,451,452 </Text> 
+<Center>
+<ConnectButton/>
+</Center>
+
+<Center>
+<Flex  >
+<Text   fontSize='6xl' color='#C9E265'>606,451,452 </Text> 
+
+<Image  boxSize='70px' align='center' src='src\assets\images\co2.png' alt='CO2' />
+</Flex>
+</Center>
 
 <Box height='80px'> </Box>
 </VStack>

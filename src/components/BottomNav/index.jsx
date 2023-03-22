@@ -1,4 +1,4 @@
-import './index.css'
+
 
 import {
  
@@ -13,7 +13,7 @@ function BottomNav() {
     return (
 
 
-                <Box bgGradient='linear(to-b,#000000,#c9e265)' height='90px'>
+                <Box bgGradient='linear(to-b,#000000,#c9e265)' height='90px' >
                     
                 </Box>
    
