@@ -13,9 +13,8 @@ function BottomNav() {
     return (
 
 
-                <Box bg='#C9E265 ' w='100%' h='70px' p={4} color='white'>
-                    <div>
-                    </div>
+                <Box bgGradient='linear(to-b,#000000,#c9e265)' height='90px'>
+                    
                 </Box>
    
             )

@@ -4,6 +4,7 @@ import ConnectButton from "../ConnectButton/index.jsx";
 import {
   Box,
   Button,
+  Center,
   Image,
   Stack,
 } from "@chakra-ui/react";
@@ -12,38 +13,40 @@ import { Link } from "react-router-dom";
 
 function TopNav() {
   return (
-    <Box bg="#C9E265 " w="100%" p={4} color="white">
+    <Box  bgGradient='linear(to-b,#c9e265, #000000)' height='90px' >
       <Stack spacing={800} direction="row" align="center">
         <Image
           height="90px"
           src=".\src\assets\images\logo2.jpeg"
           alt="c02 icon"
         />
-
+<Center>
         <Stack spacing={4} direction="row" align="center">
 
            <Link to="/" className="nav-router-link">
-          <button2>
+          <Button colorScheme="transparent"  size="lg">
             Home
-            </button2>
+            </Button>
            </Link>
 
              <Link to="/swap" className="nav-router-link">
-          <button2>
+          <Button colorScheme="transparent"  size="lg">
             {/* Styling is applied to link in the css file */}
          
               {/* change url to /swap without causing the entire app reload */}
               {/* Always use Link tag instead of <a> tag */}
               Swap
-          </button2>
+          </Button>
              </Link>
 
-          <button2 colorScheme="teal" size="md">
+          <Button colorScheme="transparent" size="lg">
             Dashboard
-          </button2>
+          </Button>
           
+
         <ConnectButton/>
         </Stack>
+        </Center>
       </Stack>
     </Box>
   );
