@@ -37,6 +37,8 @@ return (
 <Image  boxSize='190px' align='center' src='src\assets\images\carbon-neutral.png' alt='Carbon Neutral' />
 </Center>
 
+<Box height='35px'> </Box>
+
 <Flex >
 <Text  p='1' fontSize='4xl' color='white'>Enter the World of </Text> 
 <Text p='1' fontSize='4xl' color='#C9E265'> [carbon] </Text>
@@ -50,10 +52,12 @@ return (
 <Text p='1' fontSize='4xl' color='white'> emissons</Text>
 </Flex>
 </Center>
-
+<Box height='35px'> </Box>
 <Center>
 <ConnectButton/>
 </Center>
+
+<Box height='35px'> </Box>
 
 <Center>
 <Flex  >
@@ -63,7 +67,7 @@ return (
 </Flex>
 </Center>
 
-<Box height='80px'> </Box>
+<Box height='120px'> </Box>
 </VStack>
 
 </Center>

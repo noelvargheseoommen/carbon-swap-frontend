@@ -23,7 +23,8 @@ function TopNav() {
           alt="c02 icon"
         />
 <Center>
-        <Stack spacing={4} direction="row" align="center" >
+<Stack spacing={2} direction="row" align="center" >
+        <Stack spacing={0} direction="row" align="center" >
       
            <Link to="/" className="nav-router-link">
           <Button colorScheme="transparent"  size="lg">
@@ -48,9 +49,17 @@ function TopNav() {
           </Button>
           </Link>
 
+          <Link to="/dashboard" className="nav-router-link">
+          <Button colorScheme="transparent" size="lg">
+            [carbon]Pools
+          </Button>
+          </Link>
+
 
         </Stack>
+        </Stack>
         </Center>
+        <ConnectButton/>
       </Stack>
     </Box>
   </Center>
