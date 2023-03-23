@@ -52,12 +52,12 @@ return (
 <Text p='1' fontSize='4xl' color='white'> emissons</Text>
 </Flex>
 </Center>
-<Box height='35px'> </Box>
+<Box height='30px'> </Box>
 <Center>
 <ConnectButton/>
 </Center>
 
-<Box height='35px'> </Box>
+<Box height='30px'> </Box>
 
 <Center>
 <Flex  >
@@ -67,7 +67,16 @@ return (
 </Flex>
 </Center>
 
-<Box height='120px'> </Box>
+<Center>
+<Flex >
+<Text  p='1' fontSize='4xl' color='white'>Liquidity locked on the </Text> 
+<Text p='1' fontSize='4xl' color='#C9E265'> [carbon] </Text>
+<Text p='1' fontSize='4xl' color='white'> swap</Text>
+</Flex>
+</Center>
+
+<Box height='52px'> </Box>
+
 </VStack>
 
 </Center>
