@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import TopNav from '../../components/TopNav'
+import DashTopNav from '../../components/DashTopNav'
 import BottomNav from '../../components/BottomNav'
 
 import {
@@ -15,7 +15,7 @@ import {
 
 
 
-function Swap() {
+function About() {
   
 
   return (
@@ -23,7 +23,7 @@ function Swap() {
    
     <div className="swap">
 
-<TopNav/>
+<DashTopNav/>
   
   
 
@@ -36,4 +36,4 @@ function Swap() {
   )
 }
 
-export default Swap
+export default About

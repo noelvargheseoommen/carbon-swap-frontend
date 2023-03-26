@@ -1,6 +1,6 @@
 
-
-import TopNav from '../../components/TopNav'
+import { Link } from "react-router-dom";
+import DashTopNav from '../../components/DashTopNav'
 import BottomNav from '../../components/BottomNav'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 
@@ -23,7 +23,7 @@ return (
 
   <div className="home">
  
-  <TopNav/>
+  <DashTopNav/>
 
   
 
@@ -54,10 +54,9 @@ return (
 </Center>
 <Box height='30px'> </Box>
 
-
-<Center>
-  <ConnectButton/>
-</Center>
+<Link to="/swap" className="nav-router-link">
+<Button colorScheme="blue"  size="lg"  variant='solid'>Enter DAPP</Button>
+</Link>
 
 <Box height='30px'> </Box>
 

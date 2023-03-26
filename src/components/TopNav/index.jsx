@@ -1,4 +1,3 @@
-import "./index.css";
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 import {
@@ -8,7 +7,6 @@ import {
   Image,
   Stack,
   Flex,
-  Spacer
 } from "@chakra-ui/react";
 
 import { Link } from "react-router-dom";
@@ -19,21 +17,20 @@ function TopNav() {
 
     <Center>
     <Box  bgGradient='linear(to-b,#c9e265, #000000)' height='90px' width='100%'>
-      <Stack spacing={800} direction="row" align="center">
+      <Stack spacing={900} direction="row" align="center">
+
+      <Link to="/" className="nav-router-link">
         <Image
           height="90px"
           src=".\src\assets\images\logo2.jpeg"
           alt="c02 icon"
         />
+        </Link>
 <Center>
 <Stack spacing={2} direction="row" align="center" >
         <Stack spacing={0} direction="row" align="center" >
       
-           <Link to="/" className="nav-router-link">
-          <Button colorScheme="transparent"  size="lg">
-            Home
-            </Button>
-           </Link>
+        
           
              <Link to="/swap" className="nav-router-link">
           <Button colorScheme="transparent"  size="lg">
@@ -60,10 +57,14 @@ function TopNav() {
 
 
         </Stack>
-        <Flex gap={700}>
+        <Center>
+        <Flex gap={500}>
+          
           <Box/>
         < ConnectButton />
+        
         </Flex>
+        </Center>
         </Stack>
         </Center>
 

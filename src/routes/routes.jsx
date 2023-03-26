@@ -2,6 +2,7 @@ import Home from "../pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 import Swap from "../pages/swap/Swap";
 import Dashboard from "../pages/dashboard";
+import About from "../pages/about";
 
 // Add your routes here.
 // Use Link element from react-router to navigate to specific url. --see src/pages/Home/index.jsx (Swap Link)
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
       {
         path: "/dashboard", // Url to render the component in element property.
         element: <Dashboard />,
+      },
+
+      {
+        path: "/about", // Url to render the component in element property.
+        element: <About />,
       },
     ],
   },
