@@ -2,7 +2,7 @@
 
 import TopNav from '../../components/TopNav'
 import BottomNav from '../../components/BottomNav'
-import ConnectButton from '../../components/ConnectButton'
+
 
 import {
     ChakraProvider,

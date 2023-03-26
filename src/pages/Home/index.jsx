@@ -2,7 +2,7 @@
 
 import TopNav from '../../components/TopNav'
 import BottomNav from '../../components/BottomNav'
-import ConnectButton from '../../components/ConnectButton'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 import {
     ChakraProvider,
@@ -53,8 +53,10 @@ return (
 </Flex>
 </Center>
 <Box height='30px'> </Box>
+
+
 <Center>
-<ConnectButton/>
+  <ConnectButton/>
 </Center>
 
 <Box height='30px'> </Box>
@@ -67,6 +69,9 @@ return (
 </Flex>
 </Center>
 
+
+
+
 <Center>
 <Flex >
 <Text  p='1' fontSize='4xl' color='white'>Liquidity locked on the </Text> 
@@ -75,7 +80,7 @@ return (
 </Flex>
 </Center>
 
-<Box height='52px'> </Box>
+<Box height='60px'> </Box>
 
 </VStack>
 

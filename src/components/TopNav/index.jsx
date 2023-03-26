@@ -1,5 +1,5 @@
 import "./index.css";
-import ConnectButton from "../ConnectButton/index.jsx";
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 import {
   Box,
@@ -7,9 +7,12 @@ import {
   Center,
   Image,
   Stack,
+  Flex,
+  Spacer
 } from "@chakra-ui/react";
 
 import { Link } from "react-router-dom";
+
 
 function TopNav() {
   return (
@@ -57,9 +60,19 @@ function TopNav() {
 
 
         </Stack>
+        <Flex gap={700}>
+          <Box/>
+        < ConnectButton />
+        </Flex>
         </Stack>
         </Center>
-        <ConnectButton/>
+
+      
+       
+
+        
+        
+
       </Stack>
     </Box>
   </Center>
