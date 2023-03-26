@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import TopNav from '../../components/TopNav'
 import BottomNav from '../../components/BottomNav'
+import SwapBox from '../../components/Swap'
 
 import {
   Box,
@@ -11,6 +12,7 @@ import {
   Image, Flex,  HStack , chakra ,
 
 } from '@chakra-ui/react'
+
 
 
 
@@ -27,6 +29,7 @@ function Swap() {
   
   
 
+<SwapBox/>
 
 
 
