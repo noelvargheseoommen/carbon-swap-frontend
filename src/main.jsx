@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 
 import {
-  ChakraProvider,
+  ChakraProvider, extendTheme,
 } from '@chakra-ui/react'
 
 
@@ -44,6 +44,17 @@ const wagmiClient = createClient({
 
 
 
+const theme = extendTheme({
+  colors: {
+    brand: {
+      100: "#c9e265",
+      200: '#c9e265e1'
+    },
+  },
+})
+
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -51,7 +62,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
 
-    <ChakraProvider cssVarsRoot='#app'>
+    <ChakraProvider cssVarsRoot='#app' theme={theme} >
     <RouterProvider router={router}></RouterProvider>
     </ChakraProvider>
 

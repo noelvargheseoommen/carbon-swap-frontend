@@ -17,7 +17,7 @@ function DashTopNav() {
   return (
 
    
-    <Box  bgGradient='linear(to-b,#c9e265, #000000)' height='90px' width='100%'>
+    <Box  bgGradient='linear(to-b,#c9e26561, #000000)' height='120px' width='100%'>
       <Stack spacing='40%' direction="row">
 
       <Link to="/" className="nav-router-link">

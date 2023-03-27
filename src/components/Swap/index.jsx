@@ -1,18 +1,11 @@
 import {
  
-    Box, Center,
+    Box, Center, extendTheme, Flex, Stack, HStack,VStack, SimpleGrid,
    
   } from '@chakra-ui/react'
 
 
-  const theme = {
-   
-    colors: {
-      yellow: {
-        100: '#187175',
-      },
-    },
-  }
+
 
 
 
@@ -21,11 +14,23 @@ function SwapBox() {
 
     return (
 
-<Center>
-                <Box bg='yellow.100' height='90px' w='50%'>
+<div>
+
+
+
+<SimpleGrid columns={1} spacing={10}>
+  <Box bg='transparent' height='80px'></Box>
+  <Center>
+  <Box bg='brand.200' height='80px' w='30%'></Box>
+  </Center>
+  <Box bg='transparent' height='80px'></Box>
+ 
+</SimpleGrid>
                     
-                </Box>
-   </Center>
+                
+ 
+
+   </div>
             )
 }
 

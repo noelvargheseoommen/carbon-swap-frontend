@@ -10,7 +10,7 @@ import {
     Button,
     ButtonGroup,
     Spacer,
-    Image, Flex,  HStack , chakra , Stack, Center, VStack,Text,
+    Image, Flex,  HStack , chakra , Stack, Center, VStack,Text, SimpleGrid,
   
   } from '@chakra-ui/react'
 
@@ -32,7 +32,7 @@ return (
 
 <Box height='100px'> </Box>
 <VStack   spacing={4}  align='stretch'>
-<Box height='80px'> </Box>
+<Box height='50px'> </Box>
 <Center>
 <Image  boxSize='190px' align='center' src='src\assets\images\carbon-neutral.png' alt='Carbon Neutral' />
 </Center>
@@ -58,7 +58,7 @@ return (
 <Button colorScheme="blue"  size="lg"  variant='solid'>Enter DAPP</Button>
 </Link>
 
-<Box height='30px'> </Box>
+<Box height='20px'> </Box>
 
 <Center>
 <Flex  >
@@ -79,11 +79,14 @@ return (
 </Flex>
 </Center>
 
-<Box height='60px'> </Box>
+<Box height='40px'> </Box>
 
 </VStack>
 
 </Center>
+
+
+
 
 
 <BottomNav/>
