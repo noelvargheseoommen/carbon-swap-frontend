@@ -8,7 +8,7 @@ import {
   Box,
   Button,
   ButtonGroup,
-  Spacer,
+  Spacer, Text, Center,
   Image, Flex,  HStack , chakra ,
 
 } from '@chakra-ui/react'
@@ -27,7 +27,7 @@ function Swap() {
 
 <TopNav/>
   
-  
+
 
 <SwapBox/>
 
