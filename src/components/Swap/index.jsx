@@ -1,6 +1,6 @@
 import {
  
-    Box, Center, extendTheme, Flex, Stack, HStack,VStack, SimpleGrid, Text, Input,
+    Box, Center, extendTheme, Flex, Stack, HStack,VStack, SimpleGrid, Text, Input, Select,
    
   } from '@chakra-ui/react'
 
@@ -37,9 +37,42 @@ function SwapBox() {
 
 <VStack  spacing={8} >
 
-  <Box height='30px' w='750px' />
-  <Input bg='black' variant='outline' placeholder='Enter Amount' w='500px' h='65px' borderRadius='3xl'/>
-  <Input bg='black' variant='outline' placeholder='Enter Amount' w='500px' h='65px' borderRadius='3xl'/>
+  <Box height='30px' w='750px'  />
+
+  <Flex >
+
+  <Box boxShadow='dark-lg' borderRadius='3xl'>
+  <Select variant='outline' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='black'>
+  <option value='option1'>BCT</option>
+  <option value='option2'>NCT</option>
+  <option value='option3'>MCO2</option>
+  </Select>
+  </Box>
+
+  <Box  bg='transparent' h='65px' w='40px' />
+
+  <Box boxShadow='dark-lg' borderRadius='3xl'>
+  <Input bg='black' variant='outline' placeholder='Enter Amount' w='450px' h='65px' borderRadius='3xl'/>
+  </Box>
+  </Flex>
+
+  <Flex>
+
+  <Box boxShadow='dark-lg' borderRadius='3xl'>
+  <Select variant='outline' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='black'>
+  <option value='option1'>BCT</option>
+  <option value='option2'>NCT</option>
+  <option value='option3'>MCO2</option>
+  </Select>
+  </Box>
+
+  <Box  bg='transparent' h='65px' w='40px' />
+
+  <Box boxShadow='dark-lg' borderRadius='3xl'>
+  <Input bg='black' variant='outline' placeholder='Enter Amount' w='450px' h='65px' borderRadius='3xl'  />
+  </Box>
+  </Flex>
+
   </VStack>
 
   </Box>
