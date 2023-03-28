@@ -58,7 +58,7 @@ function TopNav() {
 
         </Stack>
         <Center>
-        <Flex gap={500}>
+        <Flex gap={480}>
           
           <Box/>
         < ConnectButton />
