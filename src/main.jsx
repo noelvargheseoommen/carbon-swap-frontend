@@ -50,6 +50,11 @@ const theme = extendTheme({
       100: "#c9e265",
       200: '#c9e265e1'
     },
+
+    lblack: {
+      100: "#000000db",
+      
+    },
   },
 })
 
