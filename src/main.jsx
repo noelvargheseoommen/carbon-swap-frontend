@@ -48,12 +48,12 @@ const theme = extendTheme({
   colors: {
     brand: {
       100: "#c9e265",
-      200: '#c9e265e1'
+      200: '#c9e265e1',
+      300: '#c9e26588'
     },
 
     lblack: {
-      100: "#000000db",
-      
+      100: "#000000db"
     },
   },
 })

@@ -43,15 +43,15 @@ function TopNav() {
              </Link>
 
 
-             <Link to="/dashboard" className="nav-router-link">
+             <Link to="/liquidity" className="nav-router-link">
           <Button colorScheme="transparent" size="lg">
-            Dashboard
+          [carbon]Pools
           </Button>
           </Link>
 
           <Link to="/dashboard" className="nav-router-link">
           <Button colorScheme="transparent" size="lg">
-            [carbon]Pools
+            Dashboard
           </Button>
           </Link>
 
