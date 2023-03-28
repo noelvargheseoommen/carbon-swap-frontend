@@ -42,7 +42,7 @@ function SwapBox() {
   <Flex >
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
-  <Select variant='filled' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='lblack.100' textColor='white'>
+  <Select variant='solid' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='white' textColor='black'>
   <option  value='option1'>BCT</option>
   <option  value='option2'>NCT</option>
   <option  value='option3'>MCO2</option>
@@ -52,14 +52,14 @@ function SwapBox() {
   <Box  bg='transparent' h='65px' w='40px' />
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
-  <Input bg='lblack.100' variant='filled' placeholder='0' textAlign='right' fontSize='35px'  w='450px' h='65px' borderRadius='3xl'/>
+  <Input bg='lblack.100' variant='filled' placeholder='0' textAlign='right' fontSize='35px'  w='450px' h='65px' borderRadius='3xl' textColor='white'/>
   </Box>
   </Flex>
 
   <Flex>
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
-  <Select variant='filled' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='lblack.100' textColor='white'>
+  <Select variant='solid' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='white' textColor='black'>
   <option value='option1'>BCT</option>
   <option value='option2'>NCT</option>
   <option value='option3'>MCO2</option>
@@ -69,7 +69,7 @@ function SwapBox() {
   <Box  bg='transparent' h='65px' w='40px' />
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
-  <Input bg='lblack.100' variant='filled' placeholder='0' textAlign='right' fontSize='35px' w='450px' h='65px' borderRadius='3xl'  />
+  <Input bg='lblack.100' variant='filled' placeholder='0' textAlign='right' fontSize='35px' w='450px' h='65px' borderRadius='3xl' textColor='white' />
   </Box>
   </Flex>
 

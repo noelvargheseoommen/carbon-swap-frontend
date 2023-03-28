@@ -32,14 +32,16 @@ function AddToPool() {
 
 
 <Center>
-<Box bg='brand.300' height='496px' w='1183px' borderRadius='3xl' >
+<Box bg='brand.400' height='496px' w='1183px' borderRadius='3xl' >
 
 <VStack  spacing={8} >
 
 
 <Box bg='transparent' height='20px'  ></Box>
 
+
 <Flex>
+
 <Select placeholder='Select Token' borderRadius='2xl' bg='white'  variant='filled' w='498px' h='76px' fontSize='20px'  textColor='black' >
   <option value='BCT'>BCT</option>
   <option value='NCT'>NCT</option>
@@ -53,6 +55,7 @@ function AddToPool() {
   <option value='NCT'>NCT</option>
   <option value='MCO2'>MCO2</option>
 </Select>
+
 </Flex>
 
 <Flex>
