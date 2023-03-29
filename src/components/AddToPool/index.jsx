@@ -32,7 +32,7 @@ function AddToPool() {
 
 
 <Center>
-<Box bg='brand.400' height='560px' w='1183px' borderRadius='3xl'  boxShadow='inner-lg' p='4'>
+<Box bg='brand.300' height='560px' w='1183px' borderRadius='3xl'  boxShadow='inner-lg' p='4'>
 
 <VStack  spacing={8} >
 
@@ -51,14 +51,14 @@ function AddToPool() {
 
 <Flex>
 <Box   boxShadow='inner-dark-lg' borderRadius='3xl'>
-  <Box variant='solid' borderRadius='2xl' w='450px' h='76px' bg='black' borderColor="black" fontSize='25px' textColor='white'>
+  <Box variant='solid' borderRadius='2xl' w='450px' h='76px' bg='lblack.100' borderColor="black" fontSize='25px' textColor='white'>
      <Center> <Text p='5' as='b'>Add Liquidity</Text></Center>
   </Box>
 </Box>
   <Box bg='transparent' w='150px'  ></Box>
 
   <Box  boxShadow='inner-dark-lg' borderRadius='3xl'>
-  <Box variant='solid' borderRadius='2xl' w='450px' h='76px' bg='black' borderColor="black" fontSize='25px' textColor='white'>
+  <Box variant='solid' borderRadius='2xl' w='450px' h='76px' bg='lblack.100' borderColor="black" fontSize='25px' textColor='white'>
      <Center> <Text p='5' as='b'>Remove Liquidity</Text></Center>
   </Box>
   </Box>

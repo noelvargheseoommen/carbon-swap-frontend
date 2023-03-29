@@ -13,8 +13,8 @@ import {
   } from '@chakra-ui/react'
 
 
-  
-function Dashboard() {
+
+function DashHome() {
 
 
 return (
@@ -32,4 +32,4 @@ return (
 )
 }
 
-export default Dashboard
+export default DashHome

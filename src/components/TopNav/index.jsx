@@ -49,7 +49,7 @@ function TopNav() {
           </Button>
           </Link>
 
-          <Link to="/dashboard" className="nav-router-link">
+          <Link to="/dashhome" className="nav-router-link">
           <Button colorScheme="transparent" size="lg">
             Dashboard
           </Button>
