@@ -4,8 +4,9 @@ import {
    
   } from '@chakra-ui/react'
 
-
-
+import {
+  ArrowDownIcon, ArrowUpIcon
+ } from '@chakra-ui/icons'
 
 
 
@@ -32,10 +33,10 @@ function SwapBox() {
 
 
   <Center>
-  <Box bg='brand.200' height='400px' w='750px' borderRadius='3xl' >
+  <Box bg='brand.200' height='410px' w='750px' borderRadius='3xl' >
 
 
-<VStack  spacing={8} >
+<VStack  spacing={4} >
 
   <Box height='30px' w='750px'  />
 
@@ -56,6 +57,10 @@ function SwapBox() {
   </Box>
   </Flex>
 
+<Flex>
+<Box w='200px'></Box><ArrowDownIcon h='40px' w='40px'/> <ArrowUpIcon h='40px' w='40px'/>
+</Flex>
+
   <Flex>
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
@@ -73,7 +78,7 @@ function SwapBox() {
   </Box>
   </Flex>
 
-  <Box  bg='transparent' h='1px' w='40px' />
+  <Box  bg='transparent' h='20px' w='40px' />
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
   <Button bg='lblack.100' variant='filled ' textColor='white' w='640px' h='65px' borderRadius='3xl'>Swap [carbon]</Button>
@@ -83,7 +88,7 @@ function SwapBox() {
 
   </Box>
   </Center>
-  <Box bg='transparent' height='200px'></Box>
+  <Box bg='transparent' height='190px'></Box>
  
 </SimpleGrid>
                     
