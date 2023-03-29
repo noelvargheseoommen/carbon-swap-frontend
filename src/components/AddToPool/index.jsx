@@ -32,7 +32,7 @@ function AddToPool() {
 
 
 <Center>
-<Box bg='brand.400' height='496px' w='1183px' borderRadius='3xl' >
+<Box bg='brand.200' height='520px' w='1183px' borderRadius='3xl'  boxShadow='inner' p='4'>
 
 <VStack  spacing={8} >
 
@@ -42,7 +42,7 @@ function AddToPool() {
 
 <Flex>
 
-<Select placeholder='Select Token' borderRadius='2xl' bg='white'  variant='filled' w='498px' h='76px' fontSize='20px'  textColor='black' >
+<Select placeholder='Select Token' borderRadius='2xl' bg='white'  variant='filled' w='450px' h='76px' fontSize='20px'  textColor='black' >
   <option value='BCT'>BCT</option>
   <option value='NCT'>NCT</option>
   <option value='MCO2'>MCO2</option>
@@ -50,7 +50,7 @@ function AddToPool() {
 
 <Box bg='transparent' w='20px'  ></Box>
 
-<Select placeholder='Select Token' borderRadius='2xl' bg='white'  variant='filled' w='498px' h='76px' fontSize='20px'  textColor='black'>
+<Select placeholder='Select Token' borderRadius='2xl' bg='white'  variant='filled' w='450px' h='76px' fontSize='20px'  textColor='black'>
   <option value='BCT'>BCT</option>
   <option value='NCT'>NCT</option>
   <option value='MCO2'>MCO2</option>
@@ -59,21 +59,33 @@ function AddToPool() {
 </Flex>
 
 <Flex>
-<Input placeholder='0.0' textAlign='right' borderRadius='2xl' bg='lblack.100'  variant='filled' w='498px' h='76px' fontSize='35px'  textColor='grey'/>
+  <Button variant='solid' borderRadius='2xl' w='450px' h='76px' bg='transparent' borderColor="black" fontSize='20px'>
+      Add Liquidity
+  </Button>
 
-<Box bg='transparent' w='20px'  ></Box>
+  <Box bg='transparent' w='20px'  ></Box>
 
-<Input placeholder='0.0' textAlign='right' borderRadius='2xl' bg='lblack.100'  variant='filled' w='498px' h='76px' fontSize='35px' textColor='white'/>
+  <Button  variant='solid' borderRadius='2xl' w='450px' h='76px' bg='transparent' borderColor="black" fontSize='20px'>
+      Remove Liquidity
+  </Button>
 </Flex>
 
 <Flex>
-<Button bg='Green' variant='solid' w='498px' h='76px' fontSize='35px' borderRadius='2xl' textColor='white'>
+<Input placeholder='0.0' textAlign='right' borderRadius='2xl' bg='lblack.100'  variant='filled' w='450px' h='76px' fontSize='35px'  textColor='grey'/>
+
+<Box bg='transparent' w='20px'  ></Box>
+
+<Input placeholder='0.0' textAlign='right' borderRadius='2xl' bg='lblack.100'  variant='filled' w='450px' h='76px' fontSize='35px' textColor='white'/>
+</Flex>
+
+<Flex>
+<Button bg='Green' variant='solid' w='450px' h='76px' fontSize='35px' borderRadius='2xl' textColor='white'>
     Deposit
 </Button>
 
 <Box bg='transparent' w='20px'  ></Box>
 
-<Button bg='maroon' variant='solid'  w='498px' h='76px' fontSize='35px' borderRadius='2xl' textColor='white' >
+<Button bg='maroon' variant='solid'  w='450px' h='76px' fontSize='35px' borderRadius='2xl' textColor='white' >
     Withdraw
 </Button>
 

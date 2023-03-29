@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 function TopNav() {
   return (
 
-    <Center>
+   
     <Box  bgGradient='linear(to-b,#c9e26561, #000000)' height='120px' width='100%'>
       <Stack spacing={900} direction="row" align="center">
 
@@ -76,7 +76,7 @@ function TopNav() {
 
       </Stack>
     </Box>
-  </Center>
+
   );
 }
 
