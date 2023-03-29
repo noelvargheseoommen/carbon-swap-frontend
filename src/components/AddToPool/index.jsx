@@ -78,7 +78,7 @@ function AddToPool() {
 
 <Flex>
 <Box  boxShadow='dark-lg' borderRadius='3xl'>
-<Button bg='Green' variant='solid' w='450px' h='76px' fontSize='35px' borderRadius='2xl' textColor='white'>
+<Button bg='Green' variant='solid' w='450px' h='76px' fontSize='30px' borderRadius='2xl' textColor='white'>
     Deposit
 </Button>
 </Box>
@@ -86,7 +86,7 @@ function AddToPool() {
 <Box bg='transparent' w='150px'  ></Box>
 
 <Box  boxShadow='dark-lg' borderRadius='3xl'>
-<Button bg='maroon' variant='solid'  w='450px' h='76px' fontSize='35px' borderRadius='2xl' textColor='white' >
+<Button bg='maroon' variant='solid'  w='450px' h='76px' fontSize='30px' borderRadius='2xl' textColor='white' >
     Withdraw
 </Button>
 </Box>
