@@ -2,28 +2,29 @@
 
 import TopNav from '../../components/TopNav'
 import BottomNav from '../../components/BottomNav'
+import DashSideNav from '../../components/DashSideNav'
 
 
 import {
-    ChakraProvider,
-    Box,
-    Button,
-    ButtonGroup,
-    Spacer,
+
+    Box,Button,Spacer,
     Image, Flex,  HStack , chakra , Stack, Center, VStack,Text,
   
   } from '@chakra-ui/react'
 
 
-
+  
 function Dashboard() {
 
 
 return (
 
-  <div className="home">
+  <div>
  
 <TopNav/>
+
+<DashSideNav/>
+
 <BottomNav/>
 
 </div>
