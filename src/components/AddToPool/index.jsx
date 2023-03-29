@@ -24,15 +24,15 @@ function AddToPool() {
 
 <Center>
 <Flex >
-<Text  p='1' fontSize='4xl' color='white'>Add to </Text> 
-<Text p='1' fontSize='4xl' color='#C9E265'> [carbon] </Text>
+<Text  p='1' fontSize='4xl' color='white'>The </Text> 
+<Text p='1' fontSize='4xl' color='#C9E265'> [liquidity] </Text>
 <Text  p='1' fontSize='4xl' color='white'>pool </Text> 
 </Flex>
 </Center>
 
 
 <Center>
-<Box bg='brand.300' height='560px' w='1183px' borderRadius='3xl'  boxShadow='inner-lg' p='4'>
+<Box bg='brand.400' height='560px' w='1183px' borderRadius='3xl'  boxShadow='inner-lg' p='4'>
 
 <VStack  spacing={8} >
 
@@ -51,22 +51,22 @@ function AddToPool() {
 
 <Flex>
 <Box   boxShadow='inner-dark-lg' borderRadius='3xl'>
-  <Button variant='solid' borderRadius='2xl' w='450px' h='76px' bg='black' borderColor="black" fontSize='25px' textColor='white'>
-      Add Liquidity
-  </Button>
+  <Box variant='solid' borderRadius='2xl' w='450px' h='76px' bg='black' borderColor="black" fontSize='25px' textColor='white'>
+     <Center> <Text p='5' as='b'>Add Liquidity</Text></Center>
+  </Box>
 </Box>
   <Box bg='transparent' w='150px'  ></Box>
 
   <Box  boxShadow='inner-dark-lg' borderRadius='3xl'>
-  <Button  variant='solid' borderRadius='2xl' w='450px' h='76px' bg='black' borderColor="black" fontSize='25px'textColor='white'>
-      Remove Liquidity
-  </Button>
+  <Box variant='solid' borderRadius='2xl' w='450px' h='76px' bg='black' borderColor="black" fontSize='25px' textColor='white'>
+     <Center> <Text p='5' as='b'>Remove Liquidity</Text></Center>
+  </Box>
   </Box>
 </Flex>
 
 <Flex>
 <Box  boxShadow='dark-lg' borderRadius='3xl'>
-<Input placeholder='0.0' textAlign='right' borderRadius='2xl' bg='lblack.100'  variant='filled' w='450px' h='76px' fontSize='35px'  textColor='grey'/>
+<Input placeholder='0.0' textAlign='right' borderRadius='2xl' bg='lblack.100'  variant='filled' w='450px' h='76px' fontSize='35px'  textColor='white'/>
 </Box>
 
 <Box bg='transparent' w='150px'  ></Box>
