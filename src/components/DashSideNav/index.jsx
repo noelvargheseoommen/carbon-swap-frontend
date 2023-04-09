@@ -3,12 +3,12 @@
 import {
     Box,
     Button,
-    Spacer,Link,
+    Spacer,
     Image, Flex,  HStack , chakra , Stack, Center, VStack,Text,
   
   } from '@chakra-ui/react'
 
-
+  import { Link } from "react-router-dom";
 
 function DashSideNav() {
 
@@ -32,37 +32,43 @@ return (
 
 
 <Center>
+<Link to="/dashprofile" className="nav-router-link">
 <Box boxShadow='dark-lg' borderRadius='xl' w='250px' h='55px'>
-<Link to="/dashhome" className="nav-router-link">
 <Button w='250px' h='55px' bg='lblack.100' textColor='white'borderRadius='xl' fontSize='19px' >
 Profile
 </Button>
-</Link>
 </Box>
+</Link>
 </Center>
 
 <Center>
+<Link to="/dashviewvehicles" className="nav-router-link">
 <Box boxShadow='dark-lg' borderRadius='xl' w='250px' h='55px'>
 <Button w='250px' h='55px' bg='lblack.100' textColor='white' borderRadius='xl' fontSize='19px'>
 View Vehicles
 </Button>
 </Box>
+</Link>
 </Center>
 
 <Center>
+<Link to="/dashaddvehicles" className="nav-router-link">
 <Box boxShadow='dark-lg' borderRadius='xl' w='250px' h='55px'>
 <Button w='250px' h='55px' bg='lblack.100' textColor='white' borderRadius='xl' fontSize='19px'>
 Add Vehicles
 </Button>
 </Box>
+</Link>
 </Center>
 
 <Center>
+<Link to="/dashhistory" className="nav-router-link">
 <Box boxShadow='dark-lg' borderRadius='xl' w='250px' h='55px'>
 <Button w='250px' h='55px' bg='lblack.100' textColor='white' borderRadius='xl' fontSize='19px' >
 History
 </Button>
 </Box>
+</Link>
 </Center>
 
 <Box h='15px'></Box>

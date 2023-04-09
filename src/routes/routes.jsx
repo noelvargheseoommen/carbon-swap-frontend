@@ -4,6 +4,9 @@ import Swap from "../pages/swap/Swap";
 import DashProfile from "../pages/DashProfile";
 import About from "../pages/about";
 import Liquidity from "../pages/liquidity";
+import DashViewVehicles from "../pages/DashViewVehicles";
+import DashAddVehicles from "../pages/DashAddVehicles";
+import DashHistory from "../pages/DashHistory";
 
 // Add your routes here.
 // Use Link element from react-router to navigate to specific url. --see src/pages/Home/index.jsx (Swap Link)
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
         element: <Swap />,
       },
       {
-        path: "/dashhome", // Url to render the component in element property.
+        path: "/dashprofile", // Url to render the component in element property.
         element: <DashProfile />,
       },
 
@@ -33,6 +36,21 @@ const router = createBrowserRouter([
       {
         path: "/liquidity", // Url to render the component in element property.
         element: <Liquidity />,
+      },
+
+      {
+        path: "/dashviewvehicles", // Url to render the component in element property.
+        element: <DashViewVehicles />,
+      },
+
+      {
+        path: "/dashaddvehicles", // Url to render the component in element property.
+        element: <DashAddVehicles />,
+      },
+
+      {
+        path: "/dashhistory", // Url to render the component in element property.
+        element: <DashHistory />,
       },
     ],
   },
