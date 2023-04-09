@@ -1,7 +1,7 @@
 import Home from "../pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 import Swap from "../pages/swap/Swap";
-import DashHome from "../pages/DashHome";
+import DashProfile from "../pages/DashProfile";
 import About from "../pages/about";
 import Liquidity from "../pages/liquidity";
 
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashhome", // Url to render the component in element property.
-        element: <DashHome />,
+        element: <DashProfile />,
       },
 
       {

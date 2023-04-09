@@ -22,7 +22,7 @@ return (
 
 <Flex>
 
-<Box bg='transparent' w='40px'></Box>
+<Box bg='transparent' w='90px'></Box>
 
 <Box  boxShadow='inner-dark-lg' borderRadius='2xl' variant='solid' bg='brand.200' h='410px' w='300px'>
 

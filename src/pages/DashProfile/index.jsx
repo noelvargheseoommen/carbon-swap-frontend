@@ -14,7 +14,7 @@ import {
 
 
 
-function DashHome() {
+function DashProfile() {
 
 
 return (
@@ -23,7 +23,24 @@ return (
  
 <TopNav/>
 
+
+<HStack spacing='90px'>
 <DashSideNav/>
+
+
+
+<Box   boxShadow='inner-dark-lg' borderRadius='2xl' variant='solid' bg='brand.200' h='410px' w='70%'>
+
+<Stack spacing={5}>
+<Box></Box>
+<Text fontSize='3xl' as='b' >Profile</Text>
+
+</Stack>
+
+</Box>
+
+</HStack>
+
 
 <BottomNav/>
 
@@ -32,4 +49,4 @@ return (
 )
 }
 
-export default DashHome
+export default DashProfile

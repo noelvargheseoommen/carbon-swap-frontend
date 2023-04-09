@@ -33,27 +33,26 @@ function TopNav() {
         
           
              <Link to="/swap" className="nav-router-link">
-          <Button colorScheme="transparent"  size="lg">
-            {/* Styling is applied to link in the css file */}
-         
+             <Button colorScheme="transparent"  size="lg">
+              {/* Styling is applied to link in the css file */}
               {/* change url to /swap without causing the entire app reload */}
               {/* Always use Link tag instead of <a> tag */}
               Swap
-          </Button>
+             </Button>
              </Link>
 
 
-             <Link to="/liquidity" className="nav-router-link">
-          <Button colorScheme="transparent" size="lg">
-          [carbon]Pools
-          </Button>
-          </Link>
+            <Link to="/liquidity" className="nav-router-link">
+            <Button colorScheme="transparent" size="lg">
+            [carbon]Pools
+            </Button>
+            </Link>
 
-          <Link to="/dashhome" className="nav-router-link">
-          <Button colorScheme="transparent" size="lg">
-            Dashboard
-          </Button>
-          </Link>
+            <Link to="/dashhome" className="nav-router-link">
+            <Button colorScheme="transparent" size="lg">
+              Dashboard
+            </Button>
+            </Link>
 
 
         </Stack>
