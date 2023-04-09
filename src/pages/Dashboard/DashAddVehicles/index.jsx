@@ -1,8 +1,8 @@
 
 
-import TopNav from '../../components/TopNav'
-import BottomNav from '../../components/BottomNav'
-import DashSideNav from '../../components/DashSideNav'
+import TopNav from '../../../components/TopNav'
+import BottomNav from '../../../components/BottomNav'
+import DashSideNav from '../../../components/DashSideNav'
 
 
 import {
@@ -14,7 +14,7 @@ import {
 
 
 
-function DashViewVehicles() {
+function DashAddVehicles() {
 
 
 return (
@@ -33,7 +33,7 @@ return (
 
 <Stack spacing={5}>
 <Box></Box>
-<Text fontSize='3xl' as='b' >Vehicles</Text>
+<Text fontSize='3xl' as='b' >Add Vehicles</Text>
 
 </Stack>
 
@@ -49,4 +49,4 @@ return (
 )
 }
 
-export default DashViewVehicles
+export default DashAddVehicles

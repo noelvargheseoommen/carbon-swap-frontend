@@ -1,12 +1,12 @@
 import Home from "../pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 import Swap from "../pages/swap/Swap";
-import DashProfile from "../pages/DashProfile";
+import DashProfile from "../pages/Dashboard/DashProfile";
 import About from "../pages/about";
 import Liquidity from "../pages/liquidity";
-import DashViewVehicles from "../pages/DashViewVehicles";
-import DashAddVehicles from "../pages/DashAddVehicles";
-import DashHistory from "../pages/DashHistory";
+import DashViewVehicles from "../pages/Dashboard/DashViewVehicles";
+import DashAddVehicles from "../pages/Dashboard/DashAddVehicles";
+import DashHistory from "../pages/Dashboard/DashHistory";
 
 // Add your routes here.
 // Use Link element from react-router to navigate to specific url. --see src/pages/Home/index.jsx (Swap Link)

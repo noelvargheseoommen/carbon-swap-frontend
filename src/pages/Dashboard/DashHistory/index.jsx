@@ -1,8 +1,8 @@
 
 
-import TopNav from '../../components/TopNav'
-import BottomNav from '../../components/BottomNav'
-import DashSideNav from '../../components/DashSideNav'
+import TopNav from '../../../components/TopNav'
+import BottomNav from '../../../components/BottomNav'
+import DashSideNav from '../../../components/DashSideNav'
 
 
 import {
@@ -14,7 +14,7 @@ import {
 
 
 
-function DashProfile() {
+function DashHistory() {
 
 
 return (
@@ -33,7 +33,7 @@ return (
 
 <Stack spacing={5}>
 <Box></Box>
-<Text fontSize='3xl' as='b' >Profile</Text>
+<Text fontSize='3xl' as='b' >History</Text>
 
 </Stack>
 
@@ -49,4 +49,4 @@ return (
 )
 }
 
-export default DashProfile
+export default DashHistory
