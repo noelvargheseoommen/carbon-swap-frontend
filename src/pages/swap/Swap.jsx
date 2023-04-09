@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import TopNav from '../../components/TopNav'
 import BottomNav from '../../components/BottomNav'
-import SwapBox from '../../components/Swap'
+import SwapBox from '../../components/SwapBox'
 
 import {
   Box,
