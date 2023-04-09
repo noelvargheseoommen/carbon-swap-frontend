@@ -3,7 +3,7 @@
 import TopNav from '../../../components/TopNav'
 import BottomNav from '../../../components/BottomNav'
 import DashSideNav from '../../../components/DashSideNav'
-
+import VehicleDetailBox from './components/VehicleDetailBox'
 
 import {
 
@@ -20,30 +20,31 @@ function DashViewVehicles() {
 return (
 
   <div>
- 
 <TopNav/>
 
 
 <HStack spacing='90px'>
+
 <DashSideNav/>
 
-
-
 <Box   boxShadow='inner-dark-lg' borderRadius='2xl' variant='solid' bg='brand.200' h='410px' w='70%'>
-
 <Stack spacing={5}>
 <Box></Box>
+
 <Text fontSize='3xl' as='b' >Vehicles</Text>
 
-</Stack>
 
+<VehicleDetailBox/>
+
+
+<Box></Box>
+</Stack>
 </Box>
 
 </HStack>
 
 
 <BottomNav/>
-
 </div>
 
 )
