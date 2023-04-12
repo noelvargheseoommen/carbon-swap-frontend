@@ -3,6 +3,7 @@
 import TopNav from '../../../components/TopNav'
 import BottomNav from '../../../components/BottomNav'
 import DashSideNav from '../../../components/DashSideNav'
+import AddVehicleForm from './addvehicle'
 
 
 import {
@@ -34,6 +35,8 @@ return (
 <Stack spacing={5}>
 <Box></Box>
 <Text fontSize='3xl' as='b' >Add Vehicles</Text>
+
+<AddVehicleForm/>
 
 </Stack>
 
