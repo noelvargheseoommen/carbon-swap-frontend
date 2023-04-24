@@ -16,7 +16,7 @@ return (
 <div>
  
 <Center>
-<Box w='70%' h='1%' bg='lblack.100'  borderRadius='15px' boxShadow='dark-lg'>
+<Box w='70%' h='20%' bg='lblack.100'  borderRadius='15px' boxShadow='dark-lg'>
 
 <Box  h='50px'></Box>
 
@@ -38,9 +38,11 @@ return (
   <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Vehicle Type'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
   </HStack>
   
+  <Box  h='40px'></Box>
+
+  <Button w='350px' h='60px' bg='lblack.100' borderColor='white' textColor='white'borderRadius='xl' fontSize='22px' > Submit </Button>
 
 </FormControl>
-
 
 <Box h='50px' ></Box>
 
