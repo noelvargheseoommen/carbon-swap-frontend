@@ -16,18 +16,33 @@ return (
 <div>
  
 <Center>
-<Box w='90%' h='1%' bg='lblack.100'  borderRadius='15px' boxShadow='dark-lg'>
+<Box w='70%' h='1%' bg='lblack.100'  borderRadius='15px' boxShadow='dark-lg'>
 
-<Box  h='30px'></Box>
+<Box  h='50px'></Box>
 
 <FormControl isRequired>
  
-  <Input bg='lblack.100' borderColor='brand.100'  variant='filled' placeholder='Vehicle Name'  textAlign='left' fontSize='20px'  w='30%' h='65px' borderRadius='2xl' textColor='white'/>
+
+  <HStack spacing='20px'>
+  <Box w='7%'></Box>
+  <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Vehicle Name'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
+  <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Registration No'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
+  </HStack>
+
+  <Spacer></Spacer>
+  <Box  h='40px'></Box>
+
+  <HStack spacing='20px'>
+  <Box w='7%'></Box>
+  <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Owners Name'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
+  <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Vehicle Type'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
+  </HStack>
+  
 
 </FormControl>
 
 
-<Box h='30px' ></Box>
+<Box h='50px' ></Box>
 
 </Box>
 </Center>
