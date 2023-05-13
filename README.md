@@ -1,6 +1,7 @@
 # carbon-swap-frontend
 
 To run locally use: npm run dev
+install vite if you dont have it already: npm i vite
 
 ![Screenshot (33)](https://github.com/noelvargheseoommen/carbon-swap-frontend/assets/53402523/27848bf8-7b48-4784-b58a-7741c7cde66e)
 ![Screenshot (35)](https://github.com/noelvargheseoommen/carbon-swap-frontend/assets/53402523/54cdff1a-50d8-491e-9148-37e68aa20fc2)
