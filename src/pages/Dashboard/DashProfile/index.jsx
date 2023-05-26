@@ -24,6 +24,7 @@ return (
  
 <TopNav/>
 
+<Box h='60px'></Box>
 
 <HStack spacing='90px'>
 <DashSideNav/>
@@ -94,6 +95,7 @@ return (
 
 </HStack>
 
+<Box h='250px'></Box>
 
 <BottomNav/>
 
