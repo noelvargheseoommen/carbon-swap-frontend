@@ -24,7 +24,7 @@ return (
 
 <Box bg='transparent' w='90px'></Box>
 
-<Box  boxShadow='inner-dark-lg' borderRadius='2xl' variant='solid' bg='brand.200' h='410px' w='300px'>
+<Box  boxShadow='inner-dark-lg' borderRadius='2xl' variant='solid' bg='brand.200' h='240px' w='300px'>
 
 <Stack spacing={8}>
 
@@ -41,15 +41,6 @@ Profile
 </Link>
 </Center>
 
-<Center>
-<Link to="/dashviewvehicles" className="nav-router-link">
-<Box boxShadow='dark-lg' borderRadius='xl' w='250px' h='55px'>
-<Button w='250px' h='55px' bg='lblack.100' textColor='white' borderRadius='xl' fontSize='19px'>
-View Vehicles
-</Button>
-</Box>
-</Link>
-</Center>
 
 <Center>
 <Link to="/dashaddvehicles" className="nav-router-link">
@@ -61,15 +52,7 @@ Add Vehicles
 </Link>
 </Center>
 
-<Center>
-<Link to="/dashhistory" className="nav-router-link">
-<Box boxShadow='dark-lg' borderRadius='xl' w='250px' h='55px'>
-<Button w='250px' h='55px' bg='lblack.100' textColor='white' borderRadius='xl' fontSize='19px' >
-History
-</Button>
-</Box>
-</Link>
-</Center>
+
 
 <Box h='15px'></Box>
 
