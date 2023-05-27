@@ -65,9 +65,11 @@ function SwapBox() {
 
   <Box boxShadow='dark-lg' borderRadius='3xl'>
   <Select variant='solid' placeholder='Select Token'  w='150px' h='65px' borderRadius='3xl' bg='white' textColor='black'>
-  <option value='option1'>BCT</option>
-  <option value='option2'>NCT</option>
-  <option value='option3'>MCO2</option>
+  <option value='BCT'>BCT</option>
+  <option value='NCT'>NCT</option>
+  <option value='MCO2'>MCO2</option>
+  <option value='USDC'>USDC</option>
+  <option value='TCT'>TCT</option>
   </Select>
   </Box>
 
