@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect, useState, useRef} from 'react';
 import ReactDOM from "react-dom/client";
+import { BalancerSDK,  Network } from '@balancer-labs/sdk';
 
 
 import {
@@ -25,6 +26,12 @@ import { publicProvider } from 'wagmi/providers/public';
 
 
 
+const config = {
+  network: Network.GOERLI,
+  rpcUrl: `https://goerli.infura.io/v3/5ad6baed6e324423b49bc2c9c1b5e5e6`,
+};
+
+const balancer = new BalancerSDK(config);
 
 const { chains, provider } = configureChains(
   [mainnet, polygon, optimism, arbitrum, goerli],

@@ -9,23 +9,27 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@balancer-labs/sdk": "^1.0.3",
+    "@balancer-labs/sdk": "^1.1.1",
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@rainbow-me/rainbowkit": "^0.12.3",
+    "@wagmi/core": "^1.0.8",
     "client": "^0.0.1",
+    "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
     "firebase": "^9.22.1",
     "framer-motion": "^10.3.1",
+    "hardhat": "^2.15.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "sort-by": "^1.2.0",
-    "wagmi": "^0.12.6"
+    "viem": "^0.3.50",
+    "wagmi": "^0.12.16"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
