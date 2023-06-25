@@ -51,10 +51,10 @@ return (
   <Table variant='simple' size='lg' textColor='white'>
     <Thead textColor='white'>
       <Tr>
-        <Th textColor='white'>Vehicle Reg.no</Th>
-        <Th textColor='white'>NAME</Th>
+        <Th textColor='white'>Reg.no</Th>
+        <Th textColor='white'>Name</Th>
         <Th  textColor='white'>Type</Th>
-        <Th  textColor='white'>CO2</Th>
+        <Th  textColor='white'>Carbon</Th>
       </Tr>
     </Thead>
     <Tbody>
