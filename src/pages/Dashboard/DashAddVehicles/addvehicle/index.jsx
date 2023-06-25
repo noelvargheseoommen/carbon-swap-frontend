@@ -34,8 +34,8 @@ return (
 
   <HStack spacing='20px'>
   <Box w='7%'></Box>
-  <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Owners Name'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
   <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Vehicle Type'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
+  <Input bg='lblack.100' borderColor='white'  variant='filled' placeholder='Carbon'  textAlign='left' fontSize='20px'  w='40%' h='65px' borderRadius='2xl' textColor='white'/>
   </HStack>
   
   <Box  h='40px'></Box>
