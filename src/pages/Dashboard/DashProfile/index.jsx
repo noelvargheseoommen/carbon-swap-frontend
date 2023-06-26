@@ -96,6 +96,7 @@ function DashProfile() {
                         <Th textColor="white">Name</Th>
                         <Th textColor="white">Type</Th>
                         <Th textColor="white">Carbon</Th>
+                        <Th textColor="white"></Th>
                       </Tr>
                     </Thead>
                     <Tbody>
@@ -105,6 +106,7 @@ function DashProfile() {
                           <Td>{data[key].name}</Td>
                           <Td>{data[key].type}</Td>
                           <Td>{data[key].carbon}</Td>
+                          <Td><Button bg='black' color='brand.100' variant='filled' >OFFSET</Button></Td>
                         </Tr>
                       ))}
                       {/* <Tr>
