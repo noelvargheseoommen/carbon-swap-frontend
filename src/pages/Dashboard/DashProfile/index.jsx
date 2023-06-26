@@ -28,7 +28,153 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
+import { useAccount, usePrepareContractWrite, useContractWrite, useSigner, useContractRead } from 'wagmi'
+import { BalancerSDK,  Network, SwapTypes, SwapType, Swaps} from '@balancer-labs/sdk';
+import {parseEther, parseUnits, formatEther} from 'viem';
+import ERC20ABI from '../../../assets/images/abi/ERC20.json';
+import { ethers } from 'ethers';
+import { parse } from "dotenv";
+
 function DashProfile() {
+
+  const config = {
+    network: 5,
+    rpcUrl: `https://goerli.infura.io/v3/5ad6baed6e324423b49bc2c9c1b5e5e6`,
+  };
+  
+  const { address } = useAccount();
+  const balancer = new BalancerSDK(config);
+  
+  const [tokenAIn, setTokenAIn] = useState(0);
+  const [tokenBOut, setTokenBOut] = useState(0);
+  const [tokenInAddr, setTokenInAddr] = useState("0x42AF277712cA92b627a1b896Fa395408BBe0b816");//usdc
+  const [tokenOutAddr, setTokenOutAddr] = useState("0x3D3F83BdAFDbAFE3E1ceb33bd1F93B62c4C40E13");//tct
+  const [allowance, setAllowance] = useState(0);
+  const [ptscpToken, setPtcsp] = useState("0x1049cD39F9aB0CD9abe9dF16dB4cF882ea9dd918");
+  const [balance, setBalance] = useState(0);
+
+  const { swaps, contracts,pricing} = balancer;
+  const { data: signer, isError, isLoading } = useSigner();
+
+  const { data: tokenAllowance} = useContractRead({
+    address: tokenInAddr,
+    abi: ERC20ABI,
+    functionName: 'allowance',
+    args: [address, contracts.vault.address],
+    watch: true,
+  })
+
+  const { data: balanceOf} = useContractRead({
+    address: tokenInAddr,
+    abi: ERC20ABI,
+    functionName: 'balanceOf',
+    args: [address],
+    watch: true,
+  })
+
+  useEffect(() => {
+    const updatedBalance = formatEther(String(balanceOf)); 
+    console.log(updatedBalance);
+
+    // Update the state with the new value
+    setBalance(updatedBalance);
+  }, []);
+
+  async function handleOffset(tokenAInput){
+    setTokenAIn(tokenAInput);
+    console.log(tokenAInput);
+    //approval
+    console.log("Approving");
+    console.log("TOKEN A INPUT: " + tokenAInput);
+    try {
+      const token1 = new ethers.Contract(
+        tokenInAddr,
+        ERC20ABI,
+        signer
+      )
+      const tx1 = await token1.approve(contracts.vault.address, parseEther(String(tokenAInput)))
+      await tx1.wait() }
+       catch (error) {
+        console.log('error: ', error)
+      }
+    ////swap
+    const encodedBatchSwapData = Swaps.encodeBatchSwap( {
+      kind: SwapType.SwapExactIn,
+      swaps: [
+        // First pool swap: 10 ETH > USDC
+        {
+          poolId:
+            '0x41e9a01b90a5e0a4744c5244b6403c386883eb2000010000000000000000080b',
+          // ETH
+          assetInIndex: 1,
+          // USDC
+          assetOutIndex: 2,
+          amount: parseEther(String(tokenAInput)),
+          userData: '0x',
+        },
+      ],
+      assets: [
+        // Balancer use the zero address for ETH and the Vault will wrap/unwrap as neccessary
+        '0x0000000000000000000000000000000000000000',
+        tokenInAddr,
+        // USDC
+        tokenOutAddr
+      ],
+      funds: {
+        fromInternalBalance: false,
+        // These can be different addresses!
+        recipient: address,
+        sender: address,
+        toInternalBalance: false,
+      },
+      limits: ['0', parseEther(String(tokenAInput)), '0'], // +ve for max to send, -ve for min to receive
+      deadline: '999999999999999999', // Infinity
+    });
+    console.log(encodedBatchSwapData)
+
+    await signer.sendTransaction({
+      data: encodedBatchSwapData,
+      to: contracts.vault.address,
+      value: '0'
+      /**
+       * The following gas inputs are optional,
+       **/
+      // gasPrice: '6000000000',
+      // gasLimit: '2000000',
+    })
+
+    const price = await handleSpotPrice(tokenAInput);
+    
+    ///burn
+    try{
+      const token2 = new ethers.Contract(
+        tokenOutAddr,
+        ERC20ABI,
+        signer
+      )
+      const tx2 = await token2.burn(parseEther(String(price)))
+      await tx2.wait()
+    } catch (error) {
+      console.log('error: ', error)
+    }
+
+
+
+  }
+
+  async function handleSpotPrice(tokenAInput){
+    const spotPrice = await pricing.getSpotPrice(tokenInAddr, tokenOutAddr);
+      console.log('spotPrice', spotPrice.toString());
+        let tokenB = spotPrice * tokenAInput;
+        setTokenBOut(tokenB);
+        console.log(tokenBOut);
+        return(spotPrice*tokenAInput);
+  }
+
+
+
+
+
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -106,7 +252,7 @@ function DashProfile() {
                           <Td>{data[key].name}</Td>
                           <Td>{data[key].type}</Td>
                           <Td>{data[key].carbon}</Td>
-                          <Td><Button bg='black' color='brand.100' variant='filled' >OFFSET</Button></Td>
+                          <Td><Button bg='black' color='brand.100' variant='filled' onClick={() => handleOffset(data[key].carbon)} >OFFSET</Button></Td>
                         </Tr>
                       ))}
                       {/* <Tr>
