@@ -34,6 +34,7 @@ import {parseEther, parseUnits, formatEther} from 'viem';
 import ERC20ABI from '../../../assets/images/abi/ERC20.json';
 import { ethers } from 'ethers';
 import { parse } from "dotenv";
+import { key } from "localforage";
 
 function DashProfile() {
 
@@ -80,7 +81,7 @@ function DashProfile() {
     setBalance(updatedBalance);
   }, []);
 
-  async function handleOffset(tokenAInput){
+  async function handleOffset(tokenAInput, key){
     setTokenAIn(tokenAInput);
     console.log(tokenAInput);
     //approval
@@ -158,7 +159,13 @@ function DashProfile() {
       console.log('error: ', error)
     }
 
+     //ref.child("db").child("vehicle").child("carbon").setValue("0");
 
+     const updates = {};
+  
+     updates['/vehicles/' + key + '/carbon'] = 0;
+   
+     return update(ref(db), updates);
 
   }
 
@@ -252,7 +259,7 @@ function DashProfile() {
                           <Td>{data[key].name}</Td>
                           <Td>{data[key].type}</Td>
                           <Td>{data[key].carbon}</Td>
-                          <Td><Button bg='black' color='brand.100' variant='filled' onClick={() => handleOffset(data[key].carbon)} >OFFSET</Button></Td>
+                          <Td><Button bg='black' color='brand.100' variant='filled' onClick={() => handleOffset(data[key].carbon, key)} >OFFSET</Button></Td>
                         </Tr>
                       ))}
                       {/* <Tr>
