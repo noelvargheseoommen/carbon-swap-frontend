@@ -401,6 +401,8 @@ function SwapBox() {
   <Input bg='lblack.100' variant='filled' placeholder='0' textAlign='right' fontSize='35px'  w='450px' h='65px' borderRadius='3xl' textColor='white' onChange={(e) => handleSpotPrice(e.target.value)}/>
   </Box>
   </Flex>
+
+  
   {
     balanceOf != undefined ? (
       <Text>Balance: {formatEther(String(balanceOf))}</Text>
@@ -408,7 +410,7 @@ function SwapBox() {
       <Text>Balance: </Text>
     )
   }
-  
+
 
 <Flex>
 <Box w='200px'></Box><ArrowDownIcon h='40px' w='40px'/> <ArrowUpIcon h='40px' w='40px'/>
@@ -454,9 +456,6 @@ function SwapBox() {
  
 </SimpleGrid>
                     
-                
- 
-
    </div>
             )
 }
