@@ -376,7 +376,7 @@ function SwapBox() {
 
 
   <Center>
-  <Box bg='brand.200' height='410px' w='750px' borderRadius='3xl' >
+  <Box bg='brand.200' height='460px' w='750px' borderRadius='3xl' >
 
 
 <VStack  spacing={4} >
