@@ -23,7 +23,7 @@ const initData = {
   name: "",
   regNo: "",
   type: "",
-  carbon: "",
+  carbon: "0",
 };
 function AddVehicleForm() {
   const [data, setData] = useState(initData);
@@ -147,6 +147,7 @@ function AddVehicleForm() {
                 h="65px"
                 borderRadius="2xl"
                 textColor="white"
+                readOnly
               />
             </HStack>
 

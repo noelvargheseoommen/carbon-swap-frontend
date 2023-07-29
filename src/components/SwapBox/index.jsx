@@ -292,48 +292,48 @@ function SwapBox() {
   }
   
   async function handleSpotPrice(tokenAInput){
-  // if(document.getElementById("tokenA").value == "0x750c48A49CC4F71c1B3b8d3D763D40Ea1D973b7C" || document.getElementById("tokenA").value == "0xb21583D10795e4Cd6de1873E7f13678D8eAd6e40" || document.getElementById("tokenA").value =="0xC0a957D9ce9c230541Bcb82653838d619a85fB1f"){
-  //   const poolId ='0x1049cd39f9ab0cd9abe9df16db4cf882ea9dd918000000000000000000000644';
-  //   const pool = await balancer.pools.find(poolId);
-  //   if (!pool) throw new BalancerError(BalancerErrorCode.POOL_DOESNT_EXIST);
-  //   const spotPrice = await pool.calcSpotPrice(
-  //       document.getElementById("tokenB").value, // BAL
-  //       document.getElementById("tokenA").value // WETH
-  //     );
-  //     setTokenAIn(tokenAInput);
-  //     setTokenInAddr(document.getElementById("tokenA").value);
-  //     let tokenB = spotPrice*tokenAInput;
-  //     setTokenBOut(tokenB);
-  //     setTokenOutAddr(document.getElementById("tokenB").value);
-  //     console.log(tokenBOut);
-  //   }
-  //   else if(document.getElementById("tokenA").value == "0x3D3F83BdAFDbAFE3E1ceb33bd1F93B62c4C40E13" || document.getElementById("tokenA").value == "0x42AF277712cA92b627a1b896Fa395408BBe0b816"){
-  //     const poolId ='0x41e9a01b90a5e0a4744c5244b6403c386883eb2000010000000000000000080b';
-  //     const pool = await balancer.pools.find(poolId);
-  //     if (!pool) throw new BalancerError(BalancerErrorCode.POOL_DOESNT_EXIST);
-  //     const spotPrice = await pool.calcSpotPrice(
-  //         document.getElementById("tokenB").value, // BAL
-  //         document.getElementById("tokenA").value // WETH
-  //       );
-  //       setTokenAIn(tokenAInput);
-  //       setTokenInAddr(document.getElementById("tokenA").value);
-  //       let tokenB = spotPrice*tokenAInput;
-  //       setTokenBOut(tokenB);
-  //       setTokenOutAddr(document.getElementById("tokenB").value);
-  //       console.log(tokenBOut);
-  //     }
-      // else{
-      //   console.log("PAIR NOT FOUND");
-      // }
-
-      const spotPrice = await pricing.getSpotPrice(document.getElementById("tokenA").value, document.getElementById("tokenB").value);
-      console.log('spotPrice', spotPrice.toString());
+  if(document.getElementById("tokenA").value == "0x750c48A49CC4F71c1B3b8d3D763D40Ea1D973b7C" || document.getElementById("tokenA").value == "0xb21583D10795e4Cd6de1873E7f13678D8eAd6e40" || document.getElementById("tokenA").value =="0xC0a957D9ce9c230541Bcb82653838d619a85fB1f"){
+    const poolId ='0x1049cd39f9ab0cd9abe9df16db4cf882ea9dd918000000000000000000000644';
+    const pool = await balancer.pools.find(poolId);
+    if (!pool) throw new BalancerError(BalancerErrorCode.POOL_DOESNT_EXIST);
+    const spotPrice = await pool.calcSpotPrice(
+        document.getElementById("tokenB").value, // BAL
+        document.getElementById("tokenA").value // WETH
+      );
       setTokenAIn(tokenAInput);
+      setTokenInAddr(document.getElementById("tokenA").value);
+      let tokenB = tokenAInput - ((spotPrice*tokenAInput)-tokenAInput);
+      setTokenBOut(tokenB);
+      setTokenOutAddr(document.getElementById("tokenB").value);
+      console.log(tokenBOut);
+    }
+    else if(document.getElementById("tokenA").value == "0x3D3F83BdAFDbAFE3E1ceb33bd1F93B62c4C40E13" || document.getElementById("tokenA").value == "0x42AF277712cA92b627a1b896Fa395408BBe0b816"){
+      const poolId ='0x41e9a01b90a5e0a4744c5244b6403c386883eb2000010000000000000000080b';
+      const pool = await balancer.pools.find(poolId);
+      if (!pool) throw new BalancerError(BalancerErrorCode.POOL_DOESNT_EXIST);
+      const spotPrice = await pool.calcSpotPrice(
+          document.getElementById("tokenB").value, // BAL
+          document.getElementById("tokenA").value // WETH
+        );
+        setTokenAIn(tokenAInput);
         setTokenInAddr(document.getElementById("tokenA").value);
-        let tokenB = spotPrice * tokenAInput;
+        let tokenB = tokenAInput - ((spotPrice*tokenAInput)-tokenAInput);
         setTokenBOut(tokenB);
         setTokenOutAddr(document.getElementById("tokenB").value);
         console.log(tokenBOut);
+      }
+      else{
+        console.log("PAIR NOT FOUND");
+      }
+      // setTokenAIn(tokenAInput);
+      //   setTokenInAddr(document.getElementById("tokenA").value);
+      //   setTokenOutAddr(document.getElementById("tokenB").value);
+      // const spotPrice = await pricing.getSpotPrice(tokenInAddr, tokenOutAddr);
+      // console.log('spotPrice', spotPrice.toString());
+      //   let tokenB = spotPrice * tokenAInput;
+      //   setTokenBOut(tokenB);
+        
+      //   console.log(tokenBOut);
   }
 
   async function handleApprove(){
@@ -345,11 +345,21 @@ function SwapBox() {
         ERC20ABI,
         signer
       )
-      const tx = await token.approve(contracts.vault.address, String(parseEther(tokenAIn)))
+      const tx = await token.approve(contracts.vault.address, parseEther(String(tokenAIn)))
       await tx.wait()
     } catch (error) {
       console.log('error: ', error)
     }
+  }
+
+  function swapOptions() {
+    let select1 = document.getElementById("tokenA")
+    let select2 = document.getElementById("tokenB") 
+
+    const tempValue = select1.value;
+    select1.value = select2.value;
+    select2.value = tempValue;
+
   }
   
   
@@ -413,7 +423,9 @@ function SwapBox() {
 
 
 <Flex>
+<div onClick={swapOptions}>
 <Box w='200px'></Box><ArrowDownIcon h='40px' w='40px'/> <ArrowUpIcon h='40px' w='40px'/>
+</div>
 </Flex>
 
   <Flex>

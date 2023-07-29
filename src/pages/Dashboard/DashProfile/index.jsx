@@ -144,7 +144,7 @@ function DashProfile() {
       // gasLimit: '2000000',
     })
 
-    const price = await handleSpotPrice(tokenAInput);
+    //const price = await handleSpotPrice(tokenAInput);
     
     ///burn
     try{
@@ -153,7 +153,9 @@ function DashProfile() {
         ERC20ABI,
         signer
       )
-      const tx2 = await token2.burn(parseEther(String(price)))
+     // const tx2 = await token2.burn(parseEther(String(price)))
+      const tx2 = await token2.burn(parseEther(String(tokenAInput)))
+
       await tx2.wait()
     } catch (error) {
       console.log('error: ', error)
